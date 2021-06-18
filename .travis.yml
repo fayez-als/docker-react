@@ -3,10 +3,8 @@ services:
     - docker
 
 
-before_install:
+after_success:
     - docker build -t fayez/react-app .
-
-script:
     - docker run fayez/react-app
 
     
