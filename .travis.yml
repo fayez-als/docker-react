@@ -1,11 +1,11 @@
 language: generic
 services:
-    - docker
+  - docker
 
 
 after_success:
-    - docker build -t fayez/react-app .
-    - docker run fayez/react-app
+  - docker build -t fayez/react-app .
+  - docker run fayez/react-app
 
     
 
