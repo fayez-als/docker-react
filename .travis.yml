@@ -1,11 +1,12 @@
-sudo: required
+language: generic
 services:
     - docker
 
 
-before_install:
-    - docker build -f Dockerfile.dev -t myapp:latest .
-    - docker run myapp 
+after_success:
+    - docker build -t fayez/react-app .
+
+    
 
 
   
