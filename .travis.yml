@@ -4,7 +4,8 @@ services:
 
 
 before_install:
-    - docker buld -f Dockerfile.dev -t myapp:latest .
+    - docker build -f Dockerfile.dev -t myapp:latest .
+    - docker run myapp 
 
-script:
-  - docker run myapp 
+
+  
