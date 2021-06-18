@@ -1,0 +1,10 @@
+sudo: required
+services:
+    - docker
+
+
+before_install:
+    - docker buld -f Dockerfile.dev -t myapp:latest .
+
+script:
+  - docker run myapp 
